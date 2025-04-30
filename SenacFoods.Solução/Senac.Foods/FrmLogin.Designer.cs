@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             panel2 = new Panel();
+            btnFechar = new Button();
             btnEntrar = new Button();
             txtSenha = new TextBox();
             txtLogin = new TextBox();
             label3 = new Label();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Red;
+            panel1.BackColor = Color.Yellow;
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -51,8 +53,19 @@
             panel1.Size = new Size(326, 552);
             panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(28, 136);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(276, 256);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // panel2
             // 
+            panel2.Controls.Add(btnFechar);
             panel2.Controls.Add(btnEntrar);
             panel2.Controls.Add(txtSenha);
             panel2.Controls.Add(txtLogin);
@@ -64,6 +77,21 @@
             panel2.Size = new Size(612, 552);
             panel2.TabIndex = 1;
             // 
+            // btnFechar
+            // 
+            btnFechar.BackColor = Color.Yellow;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatAppearance.MouseDownBackColor = Color.White;
+            btnFechar.FlatAppearance.MouseOverBackColor = Color.Red;
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.Location = new Point(549, 22);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(38, 38);
+            btnFechar.TabIndex = 3;
+            btnFechar.Text = "X";
+            btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += btnFechar_Click;
+            // 
             // btnEntrar
             // 
             btnEntrar.BackColor = Color.Black;
@@ -73,12 +101,13 @@
             btnEntrar.FlatStyle = FlatStyle.Flat;
             btnEntrar.Font = new Font("SimSun", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEntrar.ForeColor = Color.White;
-            btnEntrar.Location = new Point(131, 328);
+            btnEntrar.Location = new Point(180, 380);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(211, 62);
             btnEntrar.TabIndex = 2;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = false;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // txtSenha
             // 
@@ -126,14 +155,6 @@
             label1.TabIndex = 1;
             label1.Text = "__________________________";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(53, 136);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(236, 213);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -146,11 +167,10 @@
             Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "food ";
-            WindowState = FormWindowState.Minimized;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -164,5 +184,6 @@
         private Label label3;
         private Button btnEntrar;
         private PictureBox pictureBox1;
+        private Button btnFechar;
     }
 }
