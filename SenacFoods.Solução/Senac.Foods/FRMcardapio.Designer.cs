@@ -34,7 +34,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1060, 531);
+            ClientSize = new Size(1090, 581);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FRMcardapio";
             Text = "FRMcardapio";
             ResumeLayout(false);

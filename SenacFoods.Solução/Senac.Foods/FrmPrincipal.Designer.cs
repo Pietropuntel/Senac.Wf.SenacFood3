@@ -35,6 +35,7 @@
             btnCardapios = new Button();
             btnFechar = new Button();
             btnMinimizar = new Button();
+            lblMensagem = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             groupBox1.Controls.Add(btnCardapios);
             groupBox1.Location = new Point(97, 92);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(831, 245);
+            groupBox1.Size = new Size(860, 257);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Senac Foods";
@@ -147,12 +148,25 @@
             btnMinimizar.UseVisualStyleBackColor = false;
             btnMinimizar.Click += btnMinimizar_Click;
             // 
+            // lblMensagem
+            // 
+            lblMensagem.AutoSize = true;
+            lblMensagem.Font = new Font("Segoe UI", 20F);
+            lblMensagem.ForeColor = SystemColors.ButtonHighlight;
+            lblMensagem.Location = new Point(374, 35);
+            lblMensagem.Name = "lblMensagem";
+            lblMensagem.Size = new Size(280, 54);
+            lblMensagem.TabIndex = 2;
+            lblMensagem.Text = "lblMenssagem";
+            lblMensagem.Click += label1_Click;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1041, 492);
+            Controls.Add(lblMensagem);
             Controls.Add(btnMinimizar);
             Controls.Add(btnFechar);
             Controls.Add(groupBox1);
@@ -162,6 +176,7 @@
             Text = "FrmPrincipal";
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -173,5 +188,6 @@
         private Button btnCardapios;
         private Button btnFechar;
         private Button btnMinimizar;
+        private Label lblMensagem;
     }
 }

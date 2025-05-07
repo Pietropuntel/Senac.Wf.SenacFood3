@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+     
 namespace Senac.Foods
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal()
+        public FrmPrincipal(string nome, string senha)
         {
             InitializeComponent();
+            lblMensagem.Text = "Bem Vindo " + nome;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -51,6 +53,11 @@ namespace Senac.Foods
         {
             var frmUsuario = new FrmUsuario();
             frmUsuario.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

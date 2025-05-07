@@ -34,7 +34,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1079, 541);
+            ClientSize = new Size(1106, 592);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmPedidoCozinha";
             Text = "FrmPedidoCozinha";
             ResumeLayout(false);

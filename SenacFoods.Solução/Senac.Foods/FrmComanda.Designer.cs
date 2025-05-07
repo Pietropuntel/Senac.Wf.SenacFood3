@@ -34,7 +34,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1048, 516);
+            ClientSize = new Size(1110, 616);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmComanda";
             Text = "FrmComanda";
             ResumeLayout(false);
