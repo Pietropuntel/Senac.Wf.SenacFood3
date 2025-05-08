@@ -24,7 +24,7 @@ namespace Senac.Foods
         { // se nome é igual a admin e senha é igual a 123
             if (nome == "admin" && senha == "123")
             { //Returna verdadeiro
-                return false;
+                return true;
             }
             else
             {  //Exibe mensagem de erro
