@@ -1,9 +1,14 @@
 ﻿
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Senac.Foods
 {
-    internal class Mesa
+    public class Mesa
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
         public int NumeroMesa { get; set; }
         // 0 - Livre, 1 - Ocupada, 2 - Reservada

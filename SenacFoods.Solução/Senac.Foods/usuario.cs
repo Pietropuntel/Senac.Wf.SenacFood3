@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Senac.Foods
 {
-    internal class usuario
+    public class Usuario
     {
         //criar as propriedades do usuario
         public int Id { get; set; }
