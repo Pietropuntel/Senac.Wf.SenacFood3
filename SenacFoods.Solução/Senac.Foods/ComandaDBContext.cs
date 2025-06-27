@@ -5,8 +5,7 @@ namespace Senac.Foods
 {
     public class ComandaDBContext:DbContext
     {
-        private object serverVersion;
-        private object conexao;
+      
 
         public ComandaDBContext():base()
         {
@@ -20,12 +19,12 @@ namespace Senac.Foods
             optionsBuilder.UseMySql(conexao, ServerVersion.AutoDetect(conexao));
             base.OnConfiguring(optionsBuilder);
         }
-        public DbSet<Usuario> Usuario  { get; set; }
-        public DbSet<C> Cs { get; set; }
+        public DbSet<Usuario> Usuarios  { get; set; }
+        public DbSet<CardapioItem> CardapioItems { get; set; }
         public DbSet<Mesa> Mesas { get; set; }
         public DbSet<Comanda> Comandas { get; set; }
         public DbSet<ComandaItem> ComandaItems { get; set; }
-        public required Dbste<PedidoCozinhaItem> PedidoCozinhaItems { get; set; }
-        public required DbSet<PedidoCozinha> PedidoCozinhas { get; set; }
+        public  Dbste<PedidoCozinhaItem> PedidoCozinhaItems { get; set; }
+        public  DbSet<PedidoCozinha> PedidoCozinhas { get; set; }
     }
 }

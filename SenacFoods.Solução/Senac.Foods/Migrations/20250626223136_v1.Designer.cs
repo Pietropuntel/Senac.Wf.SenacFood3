@@ -11,7 +11,7 @@ using Senac.Foods;
 namespace Senac.Foods.Migrations
 {
     [DbContext(typeof(ComandaDBContext))]
-    [Migration("20250613005330_v1")]
+    [Migration("20250626223136_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace Senac.Foods.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("Senac.Foods.C", b =>
+            modelBuilder.Entity("Senac.Foods.CardapioItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -48,7 +48,7 @@ namespace Senac.Foods.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cs");
+                    b.ToTable("CardapioItems");
                 });
 
             modelBuilder.Entity("Senac.Foods.Comanda", b =>
@@ -150,7 +150,7 @@ namespace Senac.Foods.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuarios");
                 });
 #pragma warning restore 612, 618
         }

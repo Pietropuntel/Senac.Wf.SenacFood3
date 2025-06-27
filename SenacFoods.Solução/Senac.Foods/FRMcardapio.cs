@@ -16,5 +16,30 @@ namespace Senac.Foods
         {
             InitializeComponent();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FRMcardapio_Load(object sender, EventArgs e)
+        {
+            BuscarCardapio();
+        }
+
+        private void BuscarCardapio()
+        {
+            using(var bd = new ComandaDBContext())
+            {
+                var cardapios = bd.CardapioItems.ToList();
+                dataGridView1.DataSource = cardapios;
+
+            }
+        }
     }
 }

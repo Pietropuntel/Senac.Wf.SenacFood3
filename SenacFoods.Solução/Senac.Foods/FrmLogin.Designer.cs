@@ -186,5 +186,6 @@
         private Button btnEntrar;
         private PictureBox pictureBox1;
         private Button btnFechar;
+        private Button button1;
     }
 }

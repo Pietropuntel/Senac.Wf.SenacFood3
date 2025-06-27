@@ -15,6 +15,25 @@ namespace Senac.Foods.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "CardapioItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Titulo = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Descricao = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Preco = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
+                    PossuiPreparo = table.Column<bool>(type: "tinyint(1)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CardapioItems", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "ComandaItems",
                 columns: table => new
                 {
@@ -47,25 +66,6 @@ namespace Senac.Foods.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Cs",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Titulo = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Descricao = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Preco = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
-                    PossuiPreparo = table.Column<bool>(type: "tinyint(1)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cs", x => x.Id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "Mesas",
                 columns: table => new
                 {
@@ -94,7 +94,7 @@ namespace Senac.Foods.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Usuario",
+                name: "Usuarios",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -109,7 +109,7 @@ namespace Senac.Foods.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuario", x => x.Id);
+                    table.PrimaryKey("PK_Usuarios", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
         }
@@ -118,13 +118,13 @@ namespace Senac.Foods.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "CardapioItems");
+
+            migrationBuilder.DropTable(
                 name: "ComandaItems");
 
             migrationBuilder.DropTable(
                 name: "Comandas");
-
-            migrationBuilder.DropTable(
-                name: "Cs");
 
             migrationBuilder.DropTable(
                 name: "Mesas");
@@ -133,7 +133,7 @@ namespace Senac.Foods.Migrations
                 name: "PedidoCozinhas");
 
             migrationBuilder.DropTable(
-                name: "Usuario");
+                name: "Usuarios");
         }
     }
 }

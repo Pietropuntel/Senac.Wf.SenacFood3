@@ -21,7 +21,7 @@ namespace Senac.Foods.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("Senac.Foods.C", b =>
+            modelBuilder.Entity("Senac.Foods.CardapioItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,7 +45,7 @@ namespace Senac.Foods.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cs");
+                    b.ToTable("CardapioItems");
                 });
 
             modelBuilder.Entity("Senac.Foods.Comanda", b =>
@@ -147,7 +147,7 @@ namespace Senac.Foods.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuarios");
                 });
 #pragma warning restore 612, 618
         }

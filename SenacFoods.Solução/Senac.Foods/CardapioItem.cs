@@ -1,7 +1,7 @@
 ﻿
 namespace Senac.Foods
 {
-        public class C
+        public class CardapioItem
     {
         public int Id { get; set; }
         public string Titulo { get; set; }
