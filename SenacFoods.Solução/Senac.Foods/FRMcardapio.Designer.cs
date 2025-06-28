@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
             textBox1 = new TextBox();
             btnFechar = new Button();
-            button3 = new Button();
             panel1 = new Panel();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -55,6 +55,18 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Cardápio";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Yellow;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Location = new Point(53, 31);
+            button3.Name = "button3";
+            button3.Size = new Size(134, 40);
+            button3.TabIndex = 3;
+            button3.Text = "+ Item";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -122,17 +134,6 @@
             btnFechar.TabIndex = 4;
             btnFechar.Text = "X";
             btnFechar.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Yellow;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(53, 31);
-            button3.Name = "button3";
-            button3.Size = new Size(134, 40);
-            button3.TabIndex = 3;
-            button3.Text = "+ Item";
-            button3.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 

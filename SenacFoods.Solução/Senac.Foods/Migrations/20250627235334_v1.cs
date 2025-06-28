@@ -81,6 +81,21 @@ namespace Senac.Foods.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "PedidoCozinhaItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    PedadoCozinhaId = table.Column<int>(type: "int", nullable: false),
+                    ComandaItemId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PedidoCozinhaItems", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "PedidoCozinhas",
                 columns: table => new
                 {
@@ -128,6 +143,9 @@ namespace Senac.Foods.Migrations
 
             migrationBuilder.DropTable(
                 name: "Mesas");
+
+            migrationBuilder.DropTable(
+                name: "PedidoCozinhaItems");
 
             migrationBuilder.DropTable(
                 name: "PedidoCozinhas");

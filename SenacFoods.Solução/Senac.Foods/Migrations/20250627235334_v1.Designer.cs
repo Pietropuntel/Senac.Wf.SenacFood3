@@ -11,7 +11,7 @@ using Senac.Foods;
 namespace Senac.Foods.Migrations
 {
     [DbContext(typeof(ComandaDBContext))]
-    [Migration("20250626223136_v1")]
+    [Migration("20250627235334_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -123,6 +123,25 @@ namespace Senac.Foods.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PedidoCozinhas");
+                });
+
+            modelBuilder.Entity("Senac.Foods.PedidoCozinhaItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ComandaItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PedadoCozinhaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PedidoCozinhaItems");
                 });
 
             modelBuilder.Entity("Senac.Foods.Usuario", b =>

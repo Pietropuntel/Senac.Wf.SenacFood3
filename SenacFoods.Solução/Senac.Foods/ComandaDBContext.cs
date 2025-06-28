@@ -24,7 +24,7 @@ namespace Senac.Foods
         public DbSet<Mesa> Mesas { get; set; }
         public DbSet<Comanda> Comandas { get; set; }
         public DbSet<ComandaItem> ComandaItems { get; set; }
-        public  Dbste<PedidoCozinhaItem> PedidoCozinhaItems { get; set; }
+        public  DbSet<PedidoCozinhaItem> PedidoCozinhaItems { get; set; }
         public  DbSet<PedidoCozinha> PedidoCozinhas { get; set; }
     }
 }

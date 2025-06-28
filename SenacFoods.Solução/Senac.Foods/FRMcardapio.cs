@@ -34,12 +34,17 @@ namespace Senac.Foods
 
         private void BuscarCardapio()
         {
-            using(var bd = new ComandaDBContext())
+            using (var bd = new ComandaDBContext())
             {
                 var cardapios = bd.CardapioItems.ToList();
                 dataGridView1.DataSource = cardapios;
 
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new FrmCardapioCad().ShowDialog();
         }
     }
 }
