@@ -78,6 +78,7 @@
             btnFechar.TabIndex = 4;
             btnFechar.Text = "X";
             btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += btnFechar_Click;
             // 
             // groupBox1
             // 
@@ -186,6 +187,7 @@
             btnCancelar.TabIndex = 1;
             btnCancelar.Text = "X Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // FrmCardapioCad
             // 
