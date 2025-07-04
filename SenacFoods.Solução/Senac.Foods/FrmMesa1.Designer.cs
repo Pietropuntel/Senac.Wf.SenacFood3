@@ -1,0 +1,168 @@
+﻿namespace Senac.Foods
+{
+    partial class FrmMesa1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            label1 = new Label();
+            btnFechar = new Button();
+            txtPesquisa = new TextBox();
+            groupBox1 = new GroupBox();
+            btnAdicionar = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            dataGridView1 = new DataGridView();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Yellow;
+            label1.FlatStyle = FlatStyle.Flat;
+            label1.Location = new Point(12, 34);
+            label1.Name = "label1";
+            label1.Size = new Size(86, 25);
+            label1.TabIndex = 5;
+            label1.Text = "Pesquisar";
+            // 
+            // btnFechar
+            // 
+            btnFechar.BackColor = Color.Yellow;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatAppearance.MouseDownBackColor = Color.White;
+            btnFechar.FlatAppearance.MouseOverBackColor = Color.Red;
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.Location = new Point(1165, 27);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(38, 38);
+            btnFechar.TabIndex = 7;
+            btnFechar.Text = "X";
+            btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += btnFechar_Click;
+            // 
+            // txtPesquisa
+            // 
+            txtPesquisa.BackColor = Color.Yellow;
+            txtPesquisa.BorderStyle = BorderStyle.None;
+            txtPesquisa.Location = new Point(118, 34);
+            txtPesquisa.Name = "txtPesquisa";
+            txtPesquisa.Size = new Size(690, 24);
+            txtPesquisa.TabIndex = 6;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(btnAdicionar);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(dataGridView1);
+            groupBox1.Location = new Point(12, 80);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1203, 551);
+            groupBox1.TabIndex = 8;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Mesa";
+            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // btnAdicionar
+            // 
+            btnAdicionar.BackColor = Color.Yellow;
+            btnAdicionar.FlatStyle = FlatStyle.Flat;
+            btnAdicionar.Location = new Point(26, 30);
+            btnAdicionar.Name = "btnAdicionar";
+            btnAdicionar.Size = new Size(134, 40);
+            btnAdicionar.TabIndex = 3;
+            btnAdicionar.Text = "+ Item";
+            btnAdicionar.UseVisualStyleBackColor = false;
+            btnAdicionar.Click += btnAdicionar_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Yellow;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(998, 500);
+            button2.Name = "button2";
+            button2.Size = new Size(168, 32);
+            button2.TabIndex = 2;
+            button2.Text = "Editar";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Yellow;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(811, 500);
+            button1.Name = "button1";
+            button1.Size = new Size(150, 34);
+            button1.TabIndex = 1;
+            button1.Text = "Excluir";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.Yellow;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(26, 77);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(1155, 415);
+            dataGridView1.TabIndex = 0;
+            // 
+            // FrmMesa1
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Red;
+            ClientSize = new Size(1227, 643);
+            Controls.Add(groupBox1);
+            Controls.Add(label1);
+            Controls.Add(btnFechar);
+            Controls.Add(txtPesquisa);
+            ForeColor = Color.Black;
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FrmMesa1";
+            Text = "FrmMesa1";
+            Load += FrmMesa1_Load;
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Label label1;
+        private Button btnFechar;
+        private TextBox txtPesquisa;
+        private GroupBox groupBox1;
+        private Button btnAdicionar;
+        private Button button2;
+        private Button button1;
+        private DataGridView dataGridView1;
+    }
+}
