@@ -42,7 +42,7 @@ namespace Senac.Foods
                 // criar um novo cardapio
                 var cardapio = new Mesa()
                 {
-                 NumeroMesa  = numero  
+                    NumeroMesa = numero
                 };
                 // adicionar cardapio   // salvar as alterações no banco de dados
                 banco.Mesas.Add(cardapio);
@@ -64,9 +64,9 @@ namespace Senac.Foods
         {
             using (var bd = new ComandaDBContext())
             {
-            var mesa = bd.Mesas.AsQueryable();
-            dataGridView1.DataSource = mesa.ToList();
-             
+                var mesa = bd.Mesas.AsQueryable();
+                dataGridView1.DataSource = mesa.ToList();
+
             }
         }
 
@@ -74,6 +74,11 @@ namespace Senac.Foods
         {
 
         }
+
+        private void FrmMesaCad_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-}
+

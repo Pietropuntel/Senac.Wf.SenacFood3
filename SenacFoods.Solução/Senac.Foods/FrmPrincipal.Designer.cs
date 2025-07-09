@@ -36,19 +36,21 @@
             btnFechar = new Button();
             btnMinimizar = new Button();
             lblMensagem = new Label();
+            btnMesa = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.Yellow;
+            groupBox1.Controls.Add(btnMesa);
             groupBox1.Controls.Add(btnUsuario);
             groupBox1.Controls.Add(btnPedidoCozinha);
             groupBox1.Controls.Add(btnComanda);
             groupBox1.Controls.Add(btnCardapios);
-            groupBox1.Location = new Point(97, 92);
+            groupBox1.Location = new Point(41, 92);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(860, 257);
+            groupBox1.Size = new Size(954, 257);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Senac Foods";
@@ -61,7 +63,7 @@
             btnUsuario.FlatAppearance.MouseOverBackColor = Color.White;
             btnUsuario.FlatStyle = FlatStyle.Flat;
             btnUsuario.Font = new Font("SimSun", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUsuario.Location = new Point(621, 58);
+            btnUsuario.Location = new Point(594, 58);
             btnUsuario.Name = "btnUsuario";
             btnUsuario.Size = new Size(155, 129);
             btnUsuario.TabIndex = 0;
@@ -77,7 +79,7 @@
             btnPedidoCozinha.FlatAppearance.MouseOverBackColor = Color.White;
             btnPedidoCozinha.FlatStyle = FlatStyle.Flat;
             btnPedidoCozinha.Font = new Font("SimSun", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPedidoCozinha.Location = new Point(432, 58);
+            btnPedidoCozinha.Location = new Point(405, 58);
             btnPedidoCozinha.Name = "btnPedidoCozinha";
             btnPedidoCozinha.Size = new Size(155, 129);
             btnPedidoCozinha.TabIndex = 0;
@@ -93,7 +95,7 @@
             btnComanda.FlatAppearance.MouseOverBackColor = Color.White;
             btnComanda.FlatStyle = FlatStyle.Flat;
             btnComanda.Font = new Font("SimSun", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnComanda.Location = new Point(252, 58);
+            btnComanda.Location = new Point(217, 58);
             btnComanda.Name = "btnComanda";
             btnComanda.Size = new Size(155, 129);
             btnComanda.TabIndex = 0;
@@ -109,7 +111,7 @@
             btnCardapios.FlatAppearance.MouseOverBackColor = Color.White;
             btnCardapios.FlatStyle = FlatStyle.Flat;
             btnCardapios.Font = new Font("SimSun", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCardapios.Location = new Point(64, 58);
+            btnCardapios.Location = new Point(28, 58);
             btnCardapios.Name = "btnCardapios";
             btnCardapios.Size = new Size(155, 129);
             btnCardapios.TabIndex = 0;
@@ -160,6 +162,22 @@
             lblMensagem.Text = "lblMenssagem";
             lblMensagem.Click += label1_Click;
             // 
+            // btnMesa
+            // 
+            btnMesa.BackColor = Color.Red;
+            btnMesa.FlatAppearance.BorderSize = 0;
+            btnMesa.FlatAppearance.MouseDownBackColor = Color.Red;
+            btnMesa.FlatAppearance.MouseOverBackColor = Color.White;
+            btnMesa.FlatStyle = FlatStyle.Flat;
+            btnMesa.Font = new Font("SimSun", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMesa.Location = new Point(782, 58);
+            btnMesa.Name = "btnMesa";
+            btnMesa.Size = new Size(155, 129);
+            btnMesa.TabIndex = 1;
+            btnMesa.Text = "Mesa";
+            btnMesa.UseVisualStyleBackColor = false;
+            btnMesa.Click += btnMesa_Click;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -189,5 +207,6 @@
         private Button btnFechar;
         private Button btnMinimizar;
         private Label lblMensagem;
+        private Button btnMesa;
     }
 }

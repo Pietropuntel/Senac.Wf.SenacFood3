@@ -31,11 +31,11 @@
             label1 = new Label();
             btnFechar = new Button();
             groupBox1 = new GroupBox();
+            dataGridView1 = new DataGridView();
             txtNumeroMesa = new TextBox();
             label2 = new Label();
             btnSalvar = new Button();
             btnCancelar = new Button();
-            dataGridView1 = new DataGridView();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -78,6 +78,17 @@
             groupBox1.TabIndex = 11;
             groupBox1.TabStop = false;
             groupBox1.Text = "Mesa";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.Yellow;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(441, 76);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(655, 352);
+            dataGridView1.TabIndex = 7;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // txtNumeroMesa
             // 
@@ -123,17 +134,6 @@
             btnCancelar.Text = "X Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = Color.Yellow;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(441, 76);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(655, 352);
-            dataGridView1.TabIndex = 7;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
             // FrmMesaCad
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -146,6 +146,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmMesaCad";
             Text = "FrmMesaCad";
+            Load += FrmMesaCad_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

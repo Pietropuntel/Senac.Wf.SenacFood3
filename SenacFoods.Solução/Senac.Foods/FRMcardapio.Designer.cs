@@ -30,8 +30,8 @@
         {
             groupBox1 = new GroupBox();
             btnAdicionar = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnEditar = new Button();
+            btnExcluir = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
             txtPesquisa = new TextBox();
@@ -45,8 +45,8 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(btnAdicionar);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(btnEditar);
+            groupBox1.Controls.Add(btnExcluir);
             groupBox1.Controls.Add(dataGridView1);
             groupBox1.Location = new Point(66, 87);
             groupBox1.Name = "groupBox1";
@@ -68,28 +68,30 @@
             btnAdicionar.UseVisualStyleBackColor = false;
             btnAdicionar.Click += btnAdicionar_Click;
             // 
-            // button2
+            // btnEditar
             // 
-            button2.BackColor = Color.Yellow;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(1031, 501);
-            button2.Name = "button2";
-            button2.Size = new Size(168, 32);
-            button2.TabIndex = 2;
-            button2.Text = "Editar";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btnEditar.BackColor = Color.Yellow;
+            btnEditar.Enabled = false;
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.Location = new Point(1031, 501);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(168, 32);
+            btnEditar.TabIndex = 2;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
-            // button1
+            // btnExcluir
             // 
-            button1.BackColor = Color.Yellow;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(863, 501);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 34);
-            button1.TabIndex = 1;
-            button1.Text = "Excluir";
-            button1.UseVisualStyleBackColor = false;
+            btnExcluir.BackColor = Color.Yellow;
+            btnExcluir.FlatStyle = FlatStyle.Flat;
+            btnExcluir.Location = new Point(863, 501);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(150, 34);
+            btnExcluir.TabIndex = 1;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // dataGridView1
             // 
@@ -100,6 +102,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1155, 415);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // label1
             // 
@@ -171,8 +174,8 @@
         #endregion
 
         private GroupBox groupBox1;
-        private Button button2;
-        private Button button1;
+        private Button btnEditar;
+        private Button btnExcluir;
         private DataGridView dataGridView1;
         private Label label1;
         private TextBox txtPesquisa;

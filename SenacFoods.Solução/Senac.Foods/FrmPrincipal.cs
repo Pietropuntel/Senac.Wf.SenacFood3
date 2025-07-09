@@ -59,5 +59,15 @@ namespace Senac.Foods
         {
 
         }
+
+        private void btnMesa_Click(object sender, EventArgs e)
+        {
+            buscarFrmMesaCad();
+        }
+
+        private void buscarFrmMesaCad()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
