@@ -140,7 +140,6 @@
             label4.Size = new Size(64, 32);
             label4.TabIndex = 5;
             label4.Text = "Preço";
-            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -151,7 +150,6 @@
             label3.Size = new Size(100, 32);
             label3.TabIndex = 4;
             label3.Text = "Descrição";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
