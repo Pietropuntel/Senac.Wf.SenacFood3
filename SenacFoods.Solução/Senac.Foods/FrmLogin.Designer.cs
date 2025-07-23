@@ -119,8 +119,10 @@
             txtSenha.Location = new Point(82, 241);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(358, 42);
-            txtSenha.TabIndex = 0;
+            txtSenha.TabIndex = 1;
             txtSenha.Text = "Senha";
+            txtSenha.Enter += txtSenha_Enter;
+            txtSenha.KeyPress += txtSenha_KeyPress;
             // 
             // txtLogin
             // 
@@ -133,6 +135,8 @@
             txtLogin.Size = new Size(358, 42);
             txtLogin.TabIndex = 0;
             txtLogin.Text = "Usuário";
+            txtLogin.Enter += txtLogin_Enter;
+            txtLogin.Leave += txtLogin_Enter;
             // 
             // label3
             // 
